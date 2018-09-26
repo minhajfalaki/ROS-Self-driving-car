@@ -1,18 +1,17 @@
-# train_model.py
 import tflearn
 from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
 from tflearn.layers.normalization import local_response_normalization
 import numpy as np
-from alexnet import alexnet
+from model import model
 WIDTH = 200
 HEIGHT = 150
 LR = 1e-3
 EPOCHS = 10
 MODEL_NAME = 'ROS-car-fast-{}-{}-{}-epochs-data.model'.format(LR, 'alexnetv2',EPOCHS)
 
-model = alexnet(WIDTH, HEIGHT, LR)
+model = model(WIDTH, HEIGHT, LR)
 
 hm_data = 22
 for j in range(EPOCHS):
