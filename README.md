@@ -9,4 +9,6 @@ To install the car simulation.(more details about the simulator is given in the 
 1. bash <(wget -q -O - https://bitbucket.org/DataspeedInc/ros_binaries/raw/default/scripts/setup.bash)
 2. sudo apt-get install ros-kinetic-dbw-mkz-simulator
 
-An additional launch file was created for making our environment with simple road and car.
+An additional car.launch file was created for making our environment with simple road and car.
+![Alt text](/home/minhajf/Pictures/gazebo_car.png?raw=true "Title")
+
