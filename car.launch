@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="use_camera_control" default="true" />
+  <arg name="world_name" default="$(find dbw_mkz_gazebo)/worlds/test_track.world" />
+  <arg name="sim_param_file" default="$(find dbw_mkz_gazebo)/yaml/single_vehicle_test_track.yaml" />
+  <arg name="urdf_file" default="$(find dbw_mkz_gazebo)/urdf/mkz.urdf.xacro" />
+
+  <include file="$(find dbw_mkz_gazebo)/launch/gazebo_world.launch" >
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="use_camera_control" value="$(arg use_camera_control)" />
+
+  </include>
+
+  <include file="$(find dbw_mkz_can)/launch/dbw.launch" >
+    <arg name="live" value="false" />
+    <arg name="load_urdf" value="false" />
+    <arg name="can_ns" value="can_bus_dbw" />
+    <arg name="vehicle_ns" value="vehicle" />
+  </include>
+
+  <node pkg="dbw_mkz_gazebo" type="mkz_spawner" name="mkz_spawner" output="screen" >
+    <param name="sim_param_file" value="$(arg sim_param_file)" />
+    <param name="urdf_file" value="$(arg urdf_file)" />
+  </node>
+
+</launch>
