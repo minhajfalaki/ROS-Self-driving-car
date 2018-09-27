@@ -9,8 +9,8 @@ Requirements:
 	-numpy
 	-tensorflow
 	-tflearn
+	-opencv2
 
-This project was done on Ubuntu 16.04 and uses Tensorflow, tflearn, numpy and ROS kinetic.
 The model is inspired from Alexnet model.
 
 To install the car simulation.(more details about the simulator is given in the simulator_manual_v1_2_0.pdf)
@@ -22,4 +22,5 @@ An additional car.launch file was created for making our environment with simple
 
 For creating datasets we can use 'Dataset_creater.py'
 
+We finally created 20000 trainable dataset
 
