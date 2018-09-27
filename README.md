@@ -1,6 +1,6 @@
 # ROS-car-autonomy
 
-This project we are trying to make gazebo simulated car self-driving. Car i used is taken from dbw_mkz ros simulation. Images from the camera is taken and a CNN model is created and trained to predict steering and throttle output.
+This project we are trying to make gazebo simulated car self-driving. This is aend to end CNN based method. Car i used is taken from dbw_mkz ros simulation. Images from the camera is taken and a CNN model is created and trained to predict steering and throttle output.
 
 Requirements:
 	-python2.7
@@ -24,5 +24,4 @@ For creating datasets we can use 'Dataset_creater.py'
 
 We finally created 20000 trainable datasets.
 
-asdad
-
+'trainer.py' trained the CNN. 
