@@ -22,5 +22,5 @@ An additional car.launch file was created for making our environment with simple
 
 For creating datasets we can use 'Dataset_creater.py'
 
-We finally created 20000 trainable dataset
+We finally created 20000 trainable datasets
 
